@@ -2,7 +2,11 @@
 <html>
 <head>
 	<title>REGEXP</title>
+	<link rel="stylesheet" type="text/css" href="regexp.css">
+	<script type="text/javascript" src="regexp.js"></script>
+
 	<style type="text/css">
+/*
 		#regExcode{
 			width: 100%;
 		}
@@ -26,7 +30,7 @@ html {
 	textarea{
 		
 	width: 100%;
-	height: 20%;
+	//height: 25%;
 	//padding:2%;
 	//border: 3px solid #cccccc;
 	//padding: 5px;
@@ -34,46 +38,25 @@ html {
 	//background-image: url(bg.gif);
 	//background-position: bottom right;
 	//background-repeat: no-repeat;
-	font-size: 20px;
+	font-size: 16px;
+	overflow: auto;
 	}
 
 #regExInput{
 	width: 100%;
-	font-size: 20px;
+	font-size: 16px;
 }
+*/
 	</style>
 
 	<script type="text/javascript">
-	window.onload = init();
-	var i;
-	var v;
-	function init(){
-		i ='';
-		x='';
-	}
-	function regExField(){
-		i = document.getElementById("regExInput").value;
-		//console.log("regex " + i);
-		testRegEx();
-	}
-	function codeField(){
-		x = document.getElementById("regExCode").value;
-		//console.log("code field " + x);
-		testRegEx();
-	}
-	function testRegEx(){
-		console.log('i = '+i);
-		console.log('x = '+x);
-	}
+	
 	</script>
 <body>
 	<h1>reg-X8R</h1>
 	<h3>Regular Expression:</h3>
  	<input type="text" id="regExInput" name="regExInput" size="51" onkeyup="regExField()" spellcheck="false">
  	<h3>String:</h3>
- 	<textarea id="regExCode" name="regExCode" rows="15" cols="20" onkeyup="codeField()" spellcheck="false"></textarea>
- 	<button>hello</button>
- 	<button>world</button>
- 	<h3>What are regular expressions?</h3>
+ 	<textarea id="regExCode" name="regExCode" rows="22" cols="10" onkeyup="codeField()" spellcheck="false"></textarea>
 </body>
 </html>
