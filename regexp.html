@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REGEXP</title>
+	<style type="text/css">
+		#regExcode{
+			width: 100%;
+		}
+		#form input[type="text"] {
+    border: 1px solid #FFFFFF;
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
+}
+
+	</style>
+
+	<script type="text/javascript">
+	window.onload = init();
+	var i;
+	var v;
+	function init(){
+		i ='';
+		x='';
+	}
+	function regExField(){
+		i = document.getElementById("regExInput").value;
+		//console.log("regex " + i);
+		testRegEx();
+	}
+	function codeField(){
+		x = document.getElementById("regExCode").value;
+		//console.log("code field " + x);
+		testRegEx();
+	}
+	function testRegEx(){
+		console.log('i = '+i);
+		console.log('x = '+x);
+	}
+	</script>
+<body>
+	<h3>Regular Expression:</h3>
+ 	<input type="text" id="regExInput" name="regExInput" size="51" onkeyup="regExField()" spellcheck="false">
+ 	<h3>String:</h3>
+ 	<textarea id="regExCode" name="regExCode" rows="20" cols="100"
+  onkeyup="codeField()" spellcheck="false"></textarea> ><br>
+</body>
+</html>
