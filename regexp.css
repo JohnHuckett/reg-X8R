@@ -15,7 +15,7 @@ html {
 		background-color: #111;
 		color: #eee;
 		font-family: monospace;
-		padding:2%;
+		padding:1%;
 	}
 
 	textarea{
@@ -36,4 +36,43 @@ html {
 #regExInput{
 	width: 100%;
 	font-size: 16px;
+}
+h1{
+	font-family:monospace;
+	font-size: 60px;
+	//color: red;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#eight{color: grey;
+	font-size: 46px;
+
+}
+#menuSwitch{
+	width: 100px;
+	height:100px;
+	color: red;
+	background-color: blue;
+	position: fixed;
+	top: 10px;
+	right:20px;
+}
+ #option:hover{
+	cursor: pointer;
+}
+#option{
+	float: right;
+}
+#blurb{
+	font-size: 12px;
+	float:right;
+	position: relative;
+}
+#output{background-color: red;}
+#regExCode ,#regExInput{
+	background-color:white;
+	color: black;
+}
+#highlight{
+	background-color: yellow;
 }
