@@ -53,11 +53,13 @@ html {
 	
 	</script>
 <body>
-	<h1>RegEx<span id="eight">8r</span><span id="blurb">regular expression generator</span></h1>
-	<h3>Regular Expression: <span id="option">option1 option2 HELP</span></h3>
- 	<div id="regExInput" size="51" onkeyup="regExField()" spellcheck="false" contenteditable="true">hello</div>
+	<h1>RegEx<span id="eight">8r</span><span id="blurb">regEx generator</span></h1>
+	<h3>Regular Expression: <span id="option">HELP</span></h3>
+ 	<input type="text" id="regExInput" size="51"  spellcheck="false" contenteditable="true">
+ 	<div id="cont">
  	<h3>String to Match:</h3>
- 	<div id="regExCode" rows="22" cols="10" onkeyup="codeField()" spellcheck="false" contenteditable="true">output</div>
- 	
+ 	<textarea id="regExCode" rows="100" cols="10" spellcheck="false" contenteditable="true" onkeyup="codeField()"></textarea>
+ 	<pre id="output"></pre>
+ 	</div>
 </body>
 </html>

@@ -20,27 +20,31 @@ html {
 
 	textarea{
 		
-	width: 100%;
+	width: 1000px;
 	//height: 25%;
 	//padding:2%;
 	//border: 3px solid #cccccc;
 	//padding: 5px;
-	font-family: Tahoma, sans-serif;
+	//font-family: Tahoma, sans-serif;
 	//background-image: url(bg.gif);
 	//background-position: bottom right;
 	//background-repeat: no-repeat;
 	font-size: 16px;
 	overflow: auto;
+	font-family: monospace;
+	color: transparent;
+
 	}
 
 #regExInput{
 	width: 100%;
 	font-size: 16px;
+	background-color: transparent;
 }
 h1{
 	font-family:monospace;
 	font-size: 60px;
-	//color: red;
+	color: red;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
@@ -64,15 +68,39 @@ h1{
 	float: right;
 }
 #blurb{
-	font-size: 12px;
+	font-size: 15px;
 	float:right;
 	position: relative;
 }
-#output{background-color: red;}
+#output{
+	background-color: orange;
+	 font-size: 16px; 	
+	font-family: monospace;
+	padding:0;//color: red; 
+
+	position: absolute; 
+	//background-color: transparent;
+	z-index: 0;
+	top:20px;
+	left:3px;
+	color: red;
+	}
+
 #regExCode ,#regExInput{
-	background-color:white;
-	color: black;
+	//background-color:white;
+	color: red;
 }
 #highlight{
 	background-color: yellow;
+}
+#regExCode{
+	background-color:transparent;
+	width: 100%;
+	position: absolute;
+	//float: left;
+	z-index: 2;
+}
+#cont{
+	//background-color: white;
+	position: relative;
 }

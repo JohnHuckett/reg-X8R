@@ -8,14 +8,16 @@ window.onload = init();
 		x='';
 	}
 	function regExField(){
-		i = document.getElementById("regExInput").innerHTML;
+		i = document.getElementById("regExInput").value;
 		console.log("regex " + i);
-		testRegEx();
+		//testRegEx();
 	}
 	function codeField(){
-		x = document.getElementById("regExCode").innerHTML;
+		x = document.getElementById("regExCode").value;
+		document.getElementById("output").innerHTML = x;
+	
 		console.log("code field " + x);
-		testRegEx();
+		//testRegEx();
 	}
 	function testRegEx(){
 		var foo = document.getElementById('regExInput').value;
