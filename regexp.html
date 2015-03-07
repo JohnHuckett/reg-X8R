@@ -53,13 +53,16 @@ html {
 	
 	</script>
 <body>
-	<h1>RegEx<span id="eight">8r</span><span id="blurb">regEx generator</span></h1>
-	<h3>Regular Expression: <span id="option">HELP</span></h3>
- 	<input type="text" id="regExInput" size="51"  spellcheck="false" contenteditable="true">
+	<h1>RegEx<span id="eight">8r</span><span id="blurb">regEx generator</span></h1><br>
+	<span class="inputCont">
+	<span>PATTERN:<input value="fish" type="text" id="regExInput" size="52"  spellcheck="false" contenteditable="true"> 
+ 	MODIFIER:<input value="g" type="text" id="modifierInput" size="52"  spellcheck="false" contenteditable="true">
+ 	</span>
  	<div id="cont">
- 	<h3>String to Match:</h3>
- 	<textarea id="regExCode" rows="100" cols="10" spellcheck="false" contenteditable="true" onkeyup="codeField()"></textarea>
+ 	STRING TO MATCH: <span id="option" onclick="testRegEx()" >test</span><br>
+ 	<textarea value="something about a fish talking about the fish and fish" id="regExCode" rows="100" cols="10" spellcheck="false" contenteditable="true" onkeyup="codeField()"></textarea>
  	<pre id="output"></pre>
  	</div>
+
 </body>
 </html>
