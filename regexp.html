@@ -53,16 +53,203 @@ html {
 	
 	</script>
 <body>
-	<h1>RegEx<span id="eight">8r</span><span id="blurb">regEx generator</span></h1><br>
-	<span class="inputCont">
-	<span>PATTERN:<input value="fish" type="text" id="regExInput" size="52"  spellcheck="false" contenteditable="true"> 
- 	MODIFIER:<input value="g" type="text" id="modifierInput" size="52"  spellcheck="false" contenteditable="true">
- 	</span>
- 	<div id="cont">
- 	STRING TO MATCH: <span id="option" onclick="testRegEx()" >test</span><br>
- 	<textarea value="something about a fish talking about the fish and fish" id="regExCode" rows="100" cols="10" spellcheck="false" contenteditable="true" onkeyup="codeField()"></textarea>
- 	<pre id="output"></pre>
+	<div id="header">
+		<h1><span id="headingCont">RegEx<span id="eight">8r</span></span><span id="blurb">javscript regEx generator</span></h1><br>
+		<span class="inputCont">
+	</div>
+	<div id="centerDiv">
+
+		<div id="sidebar">
+		<h4>Modifiers:</h4>
+		<table><tbody>
+			<tr>
+				<th style="color:transparent">////</th>
+				<th>matches</th>
+			</tr>
+			<tr class="tableItems">
+				
+					<td>i</td>
+					<td>case insensitive</td>
+				
+			</tr>
+			<tr>
+				<td>g</td>
+				<td>global</td>
+			</tr>
+			<tr>
+				<td>m</td>
+				<td>multiline</td>
+			</tr>
+		</tbody></table>
+		<h4>Quantifiers:</h4>
+		<table><tbody>
+			<tr>
+				<th></th>
+				<th>matches</th>
+			</tr>
+			<tr>
+				<td><i>n</i>+</td>
+				<td>any string with atleast one <i>n</i></td>
+			</tr>
+			<tr>
+				<td><i>n</i>*</td>
+				<td>any string with zero or more <i>n</i></td>
+			</tr>
+			<tr>
+				<td><i>n</i>?</td>
+				<td>any string with one or less <i>n</i></td>
+			</tr>
+			<tr>
+				<td><i>n</i>{<i>x</i>}</td>
+				<td>any string with a sequence of <i>x n</i>s</td>
+			</tr>
+			<tr>
+				<td><i>n</i>$</td>
+				<td>any string with <i>n</i> at the end</td>
+			</tr>
+			<tr>
+				<td>^n</td>
+				<td>any string with <i>n</i> at the beginning</td>
+			</tr>
+			<tr>
+				<td>?=<i>n</i></td>
+				<td>any string followed by string <i>n</i></td>
+			</tr>
+			<tr>
+				<td>?!<i>n</i></td>
+				<td>any string not followed by string n</td>
+			</tr>
+		</tbody></table>
+		<h4>MetaCharacters:</h4>	
+		<table><tbody>
+			<tr>
+				<th></th>
+				<th>matches</th>
+			</tr>
+			<tr>
+				<td>.</td>
+				<td>single character, except newline or line terminator</td>
+			</tr>
+			<tr>
+				<td>\w</td>
+				<td>word character</td>
+			</tr>
+			<tr>
+				<td>\W</td>
+				<td>non word character</td>
+			<tr>
+				<td>\d</td>
+				<td>digit character</td>
+			</tr>
+			<tr>
+				<td>\D</td>
+				<td>non digit character</td>
+			</tr>
+			<tr>
+				<td>\s</td>
+				<td>whitespace Character</td>
+			</tr>
+			<tr>
+				<td>\S</td>
+				<td>non whitespace Character</td>
+			</tr>
+			<tr>
+				<td>\b</td>
+				<td>beginning/end of a word</td>
+			</tr>
+			<tr>
+				<td>\B</td>
+				<td>NOT at beginning/end of a word</td>
+			</tr>
+			<tr>
+				<td>\0</td>
+				<td>NUL character</td>
+			</tr>
+			<tr>
+				<td>\n</td>
+				<td>newline character</td>
+			</tr>
+			<tr>
+				<td>\f</td>
+				<td>form feed charcter</td>
+			</tr>
+			<tr>
+				<td>\r</td>
+				<td>carriage return character</td>
+			</tr>
+			<tr>
+				<td>\t</td>
+				<td>tab character</td>
+			</tr>
+			<tr>
+				<td>\v</td>
+				<td>vertical tab character</td>
+			</tr>
+			<tr>
+				<td>\xxx</td>
+				<td>character specified by an octal number xxx</td>
+			</tr>
+			<tr>
+				<td>\xdd</td>
+				<td>character specified by a hexadecimal number dd</td>
+			</tr>
+			<tr>
+				<td>\uxxxx</td>
+				<td>Unicode character specified by a hexidecimal number</td>
+			</tr>
+		</tbody></table>
+		<h2>Brackets</h2>
+		<table><tbody>
+			<tr>
+				<th>Expression</th>
+				<th>Discription</th>
+				<th>Examples</th>
+			</tr>
+			<tr>
+				<td>[abc]</td>
+				<td>Find any character between the brackets, i.e. abc</td>
+			</tr>
+			<tr>
+				<td>[^abc]</td>
+				<td>Find any character NOT between the brackets, i.e. d-z</td>
+			</tr>
+			<tr>
+				<td>[123]</td>
+				<td>Find any digit between the brackets, i.e. 123</td>
+			</tr>
+			<tr>
+				<td>[^123]</td>
+				<td>Find any digit NOT between the bracket, i.e. 4567890</td>
+			</tr>
+		</tbody></table>
+		<h4>Useful Patterns</h4>
+		<table><tbody>
+			<tr>
+				<td><i>n1</i>((.|\n)*?)<i>n2</i></td>
+				<td>any character between <i>n1</i> and <i>n2</i> including line breaks</td>
+			</tr>
+		</tbody></table>
+			
+		
+				
+		</div>
+
+	<div id="content">
+		<div id="contA">
+		<span>PATTERN:<span id="help"><a id="helpButton" onclick="showKey()">HELP</a></span><input value="fish" type="text" id="regExInput" size="52"  spellcheck="false" contenteditable="true" onkeyup="codeField()"> <br>
+ 		MODIFIER:<span id="help">HELP</span><input value="g" type="text" id="modifierInput" size="52"  spellcheck="false" contenteditable="true" onkeyup="testRegEx()">
+ 		</span>
+ 		</div>
+ 		<div id="cont">
+ 			STRING TO MATCH: <span id="help">HELP</span><br>
+ 			<textarea value="something about a fish talking about the fish and fish" id="regExCode" rows="100" cols="10" spellcheck="false" contenteditable="true" onkeyup="codeField()"></textarea>
+ 			<pre id="output"></pre>
+ 		</div>
  	</div>
+
+	</div>
+	
+ 	
 
 </body>
 </html>

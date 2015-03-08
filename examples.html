@@ -1,0 +1,50 @@
+<head>
+	<style type="text/css">
+	table,tr,td,th{
+	border-color: #000;
+	border-collapse: collapse;
+	border: 1px solid black;
+	padding:5px;
+	}
+	i{
+		//color:grey;
+	}
+	</style>
+</head>
+<h1>Regular Expressions: Examples</h1>	
+<h2>Real world Examples</h2>
+<h2>Highlighting CSS</h2>
+<table>
+	<tr>
+		<td>class</td>
+		<td>\.(.*?)\w+</td>
+	</tr>
+	<tr>
+		<td>id</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>hex</td>
+		<td>(#[\da-f]{6})|(#[\da-f]{3})</td>
+	</tr>
+</table>
+<h2>Useful Patterns</h2>
+<table>
+	<tr>
+		<th>pattern</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td><i>a</i>(.*?)<i>b</i></td>
+		<td>matches <i>a</i> and <i>b</i> and all characters inbetween  excluding line breaks.
+		</td>
+	</tr>
+	<tr>
+		<td><i>a</i>((.|\n)*?)<i>b</i></td>
+		<td>matches <i>a</i> and <i>b</i> and all characters inbetween including line breaks</td>
+	</tr>
+	<tr>
+		<td>([^a])(\w*(?=b))</td>
+		<td></td>
+	</tr>
+</table>
