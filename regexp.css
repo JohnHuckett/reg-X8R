@@ -174,3 +174,6 @@ tr:hover, h4:hover, #headingCont:hover, #help:hover, #helpButton:hover{
 #regExHigh{
 	background-color: orange;
 }
+#error{
+	color:red;
+}

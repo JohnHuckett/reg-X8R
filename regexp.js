@@ -9,7 +9,9 @@ window.onload = init();
 	}
 	function regExField(){
 		i = document.getElementById("regExInput").value;
+		
 		testRegEx();
+		
 	}
 	function codeField(){
 		x = document.getElementById("regExCode").value;
@@ -25,7 +27,8 @@ window.onload = init();
 		y = y.replace(/</g,'&lt;').replace(/>/g,'&gt;');
 		y = y.replace(/rgx8r0pen/g,'<span id="regExHigh">').replace(/rgx8rcl0se/g,'</span>');
 		document.getElementById("output").innerHTML = y;
-		document.getElementById('regExCode').value=x;	
+		document.getElementById('regExCode').value=x;
+		document.getElementById('error').innerHTML = '';	
 	}
 	function showKey(){
 		var foo = document.getElementById('helpButton').innerHTML;
@@ -39,3 +42,8 @@ window.onload = init();
 		}
 		
 	}
+	
+	window.onerror = function() {
+		document.getElementById('error').innerHTML = '&nbsp;INVALID REGULAR EXPRESSION!';
+	}
+	
