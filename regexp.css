@@ -98,7 +98,7 @@ h1{
 	z-index: -10;
 	top:3px;
 	left:4px;
-	color: green;
+	color: transparent;
 	overflow: auto;
 
 	}
@@ -169,4 +169,8 @@ tr:hover, h4:hover, #headingCont:hover, #help:hover, #helpButton:hover{
 }
 #contA{
 	position: relative;
+}
+
+#regExHigh{
+	background-color: orange;
 }
