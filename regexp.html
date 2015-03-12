@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="regexp.js"></script>
 <body>
 	<div id="header">
-		<h1><span id="headingCont">RegEx<span id="eight">8r</span></span><span id="blurb">javscript regEx generator</span></h1><br>
+		<h1><span id="headingCont">RegEx<span id="eight">8r</span></span><span id="blurb">javascript regEx tester</span></h1><br>
 		<span class="inputCont">
 	</div>
 	<div id="centerDiv">
@@ -184,13 +184,13 @@
 
 	<div id="content">
 		<div id="contA">
-		<span>PATTERN:<span id="error"></span><span id="help"><a onclick="testRegEx()">TEST </a><a href="tutorial.html">TUTORIAL &nbsp;</a><a href="about.html">ABOUT &nbsp;</a><a>EXAMPLES &nbsp;</a><a id="helpButton" onclick="showKey()">HELP</a></span><input value="fish" type="text" id="regExInput" size="52"  spellcheck="false" contenteditable="true" onkeyup="codeField()"> <br>
- 		MODIFIER:<span id="help">HELP</span><input value="g" type="text" id="modifierInput" size="52"  spellcheck="false" contenteditable="true" onkeyup="testRegEx()">
+		<span>PATTERN:<span id="error"></span><span id="help"><a href="about.html">ABOUT &nbsp;</a><a>EXAMPLES &nbsp;</a><a id="helpButton" onclick="showKey()">HELP</a></span><input type="text" id="regExInput" size="52"  spellcheck="false" contenteditable="true" onkeyup="codeField()"> <br>
+ 		MODIFIER:<span id="modifierError"></span><input value="g" type="text" id="modifierInput" size="52"  spellcheck="false" contenteditable="true" onkeyup="testRegEx()">
  		</span>
  		</div>
  		<div id="cont">
- 			STRING TO MATCH: <span id="help">HELP</span><br>
- 			<textarea value="something about a fish talking about the fish and fish" id="regExCode" rows="100" cols="10" spellcheck="false" contenteditable="true" onkeyup="codeField()"></textarea>
+ 			STRING TO MATCH: <br>
+ 			<textarea id="regExCode" rows="100" cols="10" spellcheck="false" contenteditable="true" onkeyup="codeField()"></textarea>
  			<pre id="output"></pre>
  		</div>
  	</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{
+    font-family: Arial;
+    font-size: 18px;
+    
+    width:100%;
+    border:1px solid red;
+    overflow:auto;
+    white-space: nowrap;
+}
+
+	</style>
+	<script type="text/javascript">
+	function log(){
+		var i = document.getElementById("spuff").innerHTML;
+		console.log(i);
+	}
+	</script>
+</head>
+<body>
+	<div id="spuff" contenteditable onkeyup="log()">
+    	Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+	</div>
+</body>
+</html>
