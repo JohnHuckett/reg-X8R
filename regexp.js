@@ -32,19 +32,23 @@ window.onload = init();
 			return(true);
 		}
 	}
+
 	function checkRegEx(regEx){
 		//unterminatedGroup
-		var patt = new RegExp(/\((?!(.*\)))/);
-		var res = patt.test(regEx);
-		if(res){
+		//var patt = new RegExp(/\((?!(.*\)))/);
+		//var res = patt.test(regEx);
+		
+		//var oop = regEx.replace(/(\\\()|(\\\))/g,'').replace(/[^\(\)]/g,'');
+		//var res = oop.match(/[\(\)]/gm);
+		//var bes = res.length
+		//console.log(res[0]);
+		/*
+		if(res[0] == '\)'){console
 			//alert();
-			displayError("unterminatedGroup");
+			displayError("UNMATCHED \'\)\'");
 			return false;
 		}
-		if(res==false){
-			displayError("noError");
-		}
-		
+		*/
 		return true;
 		
 	}
@@ -78,14 +82,14 @@ window.onload = init();
 
 	function displayError(error){
 		switch (error){
-			case "unterminatedGroup":
-				document.getElementById('error').innerHTML = 'unterminated group';
+			case "UNTERMINATED GROUP":
+				document.getElementById('error').innerHTML = '&nbsp;'+error;
 				break;
-			case "invalidRegularExpression":
-				document.getElementById('error').innerHTML = '&nbsp;INVALID REGULAR EXPRESSION!';
-			case "noError":
-				document.getElementById('error').innerHTML = '&nbsp;';
+			case "INVALID REGULAR EXPRESSION":
+				document.getElementById('error').innerHTML = '&nbsp;'+error;
 				break;
+			case "NO ERROR":
+				document.getElementById('error').innerHTML = '';
 		}
 
 		return;
@@ -94,7 +98,7 @@ window.onload = init();
 
 	window.onerror = function() {
 		//alert();
-		displayError("invalidRegularExpression");
+		displayError("INVALID REGULAR EXPRESSION");
 		//document.getElementById('error').innerHTML = '&nbsp;INVALID REGULAR EXPRESSION!';
 	}
 	
