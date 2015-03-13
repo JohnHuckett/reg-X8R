@@ -11,6 +11,7 @@ window.onload = init();
 
 	function regExField(){
 		i = document.getElementById("regExInput").value;
+
 		testRegEx();
 	}
 
@@ -31,10 +32,27 @@ window.onload = init();
 			return(true);
 		}
 	}
+	function checkRegEx(regEx){
+		//unterminatedGroup
+		var patt = new RegExp(/\((?!(.*\)))/);
+		var res = patt.test(regEx);
+		if(res){
+			//alert();
+			displayError("unterminatedGroup");
+			return false;
+		}
+		if(res==false){
+			displayError("noError");
+		}
+		
+		return true;
+		
+	}
+
 	function testRegEx(){
+		var regExInput = document.getElementById('regExInput').value;
 		var modifier = document.getElementById('modifierInput').value;
-		if(checkModifier(modifier)==true){
-			var regExInput = document.getElementById('regExInput').value;
+		if((checkModifier(modifier)==true)&&(checkRegEx(regExInput))==true){
 			var i = new RegExp(regExInput,modifier);
 			var y = strToTest.replace(i, 'rgx8r0pen$&rgx8rcl0se' );
 			y = y.replace(/&/g,'&amp;');
@@ -57,8 +75,26 @@ window.onload = init();
 			document.getElementById('helpButton').innerHTML = 'HELP';
 		}
 	}
-	
+
+	function displayError(error){
+		switch (error){
+			case "unterminatedGroup":
+				document.getElementById('error').innerHTML = 'unterminated group';
+				break;
+			case "invalidRegularExpression":
+				document.getElementById('error').innerHTML = '&nbsp;INVALID REGULAR EXPRESSION!';
+			case "noError":
+				document.getElementById('error').innerHTML = '&nbsp;';
+				break;
+		}
+
+		return;
+	}
+
+
 	window.onerror = function() {
-		document.getElementById('error').innerHTML = '&nbsp;INVALID REGULAR EXPRESSION!';
+		//alert();
+		displayError("invalidRegularExpression");
+		//document.getElementById('error').innerHTML = '&nbsp;INVALID REGULAR EXPRESSION!';
 	}
 	
