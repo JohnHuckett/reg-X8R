@@ -11,4 +11,12 @@ Examples!!!!
 About Page
 	Full description of project. Contact details. Link to git hub.
 
+Number of matches
+	Display the number of matches.
+
+INFINITE!!!
+	Display Error if regex matches infinite strings
+
+
+
 
