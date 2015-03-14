@@ -1,0 +1,14 @@
+Deal with Syntax errors on regex input.
+	checkRegEx()
+		Identify errors in regex syntax and inform user and  highlight errors.
+
+Bug!!!
+	The textarea and underlying output div. Do not overflow in the same manner. leading to highlighted text not lineing up when the input is wider than text area.
+
+Examples!!!!
+	We need examples!
+
+About Page
+	Full description of project. Contact details. Link to git hub.
+
+
