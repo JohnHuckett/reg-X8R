@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="regexp.js"></script>
 <body>
 	<div id="header">
-		<h1><span id="headingCont">RegEx<span id="eight">8r</span></span><span id="blurb">javascript regEx tester</span></h1><br>
+		<h1><span id="headingCont">Regex<span id="eight">test</span></span><span id="blurb">javascript regEx tester</span></h1><br>
 		<span class="inputCont">
 	</div>
 	<div id="centerDiv">
@@ -184,13 +184,14 @@
 
 	<div id="content">
 		<div id="contA">
-		<span>PATTERN:<span id="error"></span><span id="help"><a href="about.html">ABOUT &nbsp;</a><a>EXAMPLES &nbsp;</a><a id="helpButton" onclick="showKey()">HELP</a></span><input type="text" id="regExInput" size="52"  spellcheck="false" contenteditable="true" onkeyup="codeField()"> <br>
+		<span>PATTERN:<span id="error"></span><span id="help"><a href="about.html">ABOUT &nbsp;</a><a id="helpButton" onclick="showKey()">HELP</a></span><input type="text" id="regExInput" size="52"  spellcheck="false" contenteditable="true" onkeyup="codeField()"> <br>
  		MODIFIER:<span id="modifierError"></span><input value="g" type="text" id="modifierInput" size="52"  spellcheck="false" contenteditable="true" onkeyup="testRegEx()">
  		</span>
+ 		
  		</div>
+ 		STRING TO MATCH: <br>
  		<div id="cont">
- 			STRING TO MATCH: <br>
- 			<textarea id="regExCode" rows="100" cols="10" spellcheck="false" contenteditable="true" onkeyup="codeField()"></textarea>
+ 			<textarea id="regExCode" rows="100" cols="10" spellcheck="false" contenteditable="true" onkeyup="codeField()" ></textarea>
  			<pre id="output"></pre>
  		</div>
  	</div>
@@ -198,6 +199,8 @@
 	</div>
 	
  	
-
+<footer>
+	built by John Huckett
+</footer>
 </body>
 </html>

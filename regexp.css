@@ -1,43 +1,39 @@
-	#regExcode{
-			width: 100%;
-		}
-		#form input[type="text"] {
+#regExcode{
+	width: 100%;
+}
+#form input[type="text"] {
     border: 1px solid #FFFFFF;
     font-size: 16px;
-    //padding: 5px;
-   // width: 50%;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 html {
 	padding-top: 0;
 	margin-top:0;
 }
-	body{
-		background-color: #111;
-		color: #eee;
-		font-family: monospace;
-		padding:1%;
-	}
-
-	textarea{
-		
+body{
+	background-color: #111;
+	color: #eee;
+	font-family: monospace;
+	padding:1%;
+}
+textarea{
 	
-	//height: 25%;
-	//padding:2%;
-	//border: 3px solid #cccccc;
-	//padding: 5px;
-	//font-family: Tahoma, sans-serif;
-	//background-image: url(bg.gif);
-	//background-position: bottom right;
-	//background-repeat: no-repeat;
-	font-size: 16px;
+	font-size: 20px;
 	overflow: auto;
 	font-family: monospace;
 	color: transparent;
-	border:2px solid grey;
-	//z-index: 10;
-
-	}
-
+	border:none;
+    overflow: auto;
+    outline: none;
+    resize:none;
+    
+}
+textarea:visited{
+	border:none;
+}
 #regExInput {
 	width: 100%;
 	font-size: 22px;
@@ -51,11 +47,11 @@ html {
 	background-color: transparent;
 	color: red;
 	font-family: monospace;
-	border:2px solid grey;
+	border:1px solid grey;
 }
 #inputCont{
 	display: inline;
-	border: 2px solid black;
+	//border: 2px solid black;
 }
 h1{
 	font-family:monospace;
@@ -90,53 +86,96 @@ h1{
 }
 #output{
 	background-color: transparent;
-	 font-size: 16px; 	
+	 font-size: 20px; 	
 	font-family: monospace;
 	padding:0;//color: green; 
 
 	position: absolute; 
 	z-index: -10;
-	top:3px;
-	left:4px;
-	color: transparent;
+	top:-18px;
+	left:2px;
+	color: green;
 	overflow: auto;
+
 
 	}
 
 #regExCode ,#regExInput{
-	//background-color:white;
 	color: red;
-	border:2px solid grey;
+	border:1px solid grey;
 }
-/*
-#highlight{
-	background-color: yellow;
-}
-*/
 #regExCode{
 	background-color:transparent;
-	width: 100%;
-	//position: absolute;
-	//float: left;
+	width: 99%;
+	margin-left: auto;
+	margin-right: auto;
 	z-index: 2;
+	border:transparent;
 
 }
 #cont{
-	//background-color: white;
 	position: relative;
+	border:solid 1px grey;
+	width:100%;
 }
 #sidebar{
 	width:300px;
 	background-color: #111;
-	height:100%;
+	//height:100%;
 	position: absolute;
 	right:-20px;
 	top:15px;
 	//float: left;
 	display:none;
 	z-index: 20;
+	border:grey 1px solid;
+	padding:5px;
+
+	-webkit-animation: mymove 200ms; /* Chrome, Safari, Opera */
+    animation: mymove 200ms;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    moz-animation-timing-function: linear;
+
+    -webkit-animation-direction: normal; /* Chrome, Safari, Opera */
+    animation-direction: normal;
+    moz-animation-timing-function: linear;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {right: -300px;}
+    to {right: -20px;}
+}
+/* Standard syntax */
+@keyframes mymove {
+    from {right: -300px;}
+    to {right: -20px;}
+}
+
+#sidebarClose{
+	width:300px;
+	background-color: #111;
+	position: absolute;
+	right:-300px;
+	top:15px;
+	z-index: 20;
 	border:grey 2px solid;
 	padding:5px;
+
+	-webkit-animation: mymoveclose .1s; /* Chrome, Safari, Opera */
+    animation: mymoveclose .1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymoveclose {
+    from {right: -20px;}
+    to {right: -300px;}
+}
+/* Standard syntax */
+@keyframes mymoveclose {
+    from {right: -20px;}
+    to {right: -300px;}
 }
 #content{
 	width:100%;
@@ -170,10 +209,10 @@ tr:hover, h4:hover, #headingCont:hover, #help:hover, #helpButton:hover{
 #contA{
 	position: relative;
 }
-
 #regExHigh{
 	background-color: orange;
 }
 #error, #modifierError{
 	color:red;
 }
+

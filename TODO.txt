@@ -3,7 +3,7 @@ Deal with Syntax errors on regex input.
 		Identify errors in regex syntax and inform user and  highlight errors.
 
 Bug!!!
-	The textarea and underlying output div. Do not overflow in the same manner. leading to highlighted text not lineing up when the input is wider than text area.
+	The textarea and underlying output div. Do not overflow in the same manner. leading to highlighted text not lining up when the input is wider than text area.
 
 Examples!!!!
 	We need examples!
@@ -16,6 +16,14 @@ Number of matches
 
 INFINITE!!!
 	Display Error if regex matches infinite strings
+
+XRegExp Support
+	Add support for xregex library
+
+syntax highlight regex input
+
+
+
 
 
 

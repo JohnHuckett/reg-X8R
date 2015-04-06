@@ -59,8 +59,11 @@ window.onload = init();
 		if((checkModifier(modifier)==true)&&(checkRegEx(regExInput))==true){
 			var i = new RegExp(regExInput,modifier);
 			var y = strToTest.replace(i, 'rgx8r0pen$&rgx8rcl0se' );
+			//y = y.replace(/\n/g,'<br>');
 			y = y.replace(/&/g,'&amp;');
+			//y = y.replace(/\n|\r/g,'<br>');
 			y = y.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+			//y = y.replace(/\n/g,'<p>');
 			y = y.replace(/rgx8r0pen/g,'<span id="regExHigh">').replace(/rgx8rcl0se/g,'</span>');
 			document.getElementById("output").innerHTML = y;
 			document.getElementById('regExCode').value = strToTest;
@@ -101,4 +104,6 @@ window.onload = init();
 		displayError("INVALID REGULAR EXPRESSION");
 		//document.getElementById('error').innerHTML = '&nbsp;INVALID REGULAR EXPRESSION!';
 	}
+	
+
 	

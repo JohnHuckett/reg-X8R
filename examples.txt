@@ -1,0 +1,7 @@
+<tags\b[^>]*>(.*?)</tags>
+gi
+<a> A Regular Expression</a>
+<p> To Match HTML Tags</to>
+<tags>Case</tags>
+<p></p>
+<TAGS>Insesitive</TAGS>
